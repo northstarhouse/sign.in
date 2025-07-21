@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 15%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(240, 5%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 15%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 15%);
+  --border: hsl(240, 6%, 90%);
+  --input: hsl(240, 6%, 90%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(142, 76%, 36%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 70%, 50%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 6%, 25%);
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212, 27%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-slate-50 text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-button {
+    @apply bg-gradient-to-r shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+  }
+  
+  .gradient-blue {
+    @apply from-blue-500 to-blue-600 text-white;
+  }
+  
+  .gradient-emerald {
+    @apply from-emerald-500 to-emerald-600 text-white;
+  }
+  
+  .gradient-purple {
+    @apply from-purple-500 to-purple-600 text-white;
+  }
+  
+  .gradient-amber {
+    @apply from-zinc-600 to-zinc-700 text-white;
+  }
+  
+  .gradient-rose {
+    @apply from-rose-500 to-rose-600 text-white;
+  }
+  
+  .avatar-gradient {
+    @apply bg-gradient-to-br flex items-center justify-center text-white font-semibold;
+  }
+  
+  .avatar-blue {
+    @apply from-slate-400 to-slate-600;
+  }
+  
+  .avatar-purple {
+    @apply from-gray-400 to-gray-600;
+  }
+  
+  .avatar-emerald {
+    @apply from-stone-400 to-stone-600;
+  }
+  
+  .avatar-pink {
+    @apply from-zinc-400 to-zinc-600;
+  }
+  
+  .avatar-indigo {
+    @apply from-neutral-400 to-neutral-600;
+  }
+}
